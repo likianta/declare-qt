@@ -1,5 +1,4 @@
-from pyml_rc.declare_qt import *
-from tests.test3 import AddressBar
+from declare_qt import *
 
 '''
 -------------------------

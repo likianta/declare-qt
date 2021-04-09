@@ -34,21 +34,20 @@ file_template = _fmt_string('''
             `blueprint/generate_qtwidgets_from_template.py`.
 
     Usages:
-        from declare_qt import Application, Label, MainWindow, VBox
+        from declare_qt import Application, Label, Widget, VBox
 
         with Application() as app:
-            with MainWindow() as win:
+            with Widget() as win:
                 with VBox() as vbox:
                     with Label() as label:
                         label.setText('Hello World')
-                        vbox.addWidget(label)
     """
     from PySide6 import QtWidgets
 
     from .base_component import BaseComponent
 
 
-    {HTML_COMPONENTS}
+    {COMPONENTS}
 ''')
 
 template = _fmt_string('''
@@ -65,6 +64,6 @@ for tag in sorted(load_list('test.txt')):
     )
 
 dumps(
-    file_template.format(HTML_COMPONENTS='\n\n'.join(components)).rstrip(),
-    '../components/qt_widgets.py'
+    file_template.format(COMPONENTS='\n\n'.join(components)).rstrip(),
+    '../declare_qt/components/qt_widgets.py'
 )
