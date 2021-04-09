@@ -1,0 +1,4 @@
+lk-lambdex
+lk-logger
+lk-utils
+pyside6
