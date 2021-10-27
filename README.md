@@ -115,6 +115,8 @@ with MainWindow() as win:
         #       -widget-window-resized-signal
 ```
 
+![](.assets/6fIqVA2mKb.gif)
+
 ### Easy to Create Animations
 
 *Note: this is in concept.*
